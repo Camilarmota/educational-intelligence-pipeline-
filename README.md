@@ -2,11 +2,13 @@
 
 **From Raw Data to Strategic Insights (SQL + Python + Power BI)**
 
+🇧🇷 Portuguese version below ↓
+
 ---
 
-## 🎯 Objetivo
+## 🎯 Objective
 
-Este projeto tem como objetivo analisar fatores que impactam o desempenho acadêmico de estudantes, identificando padrões, desigualdades e alunos em risco, a fim de apoiar decisões estratégicas na área educacional.
+This project analyzes the key factors that influence students' academic performance, identifying patterns, inequalities, and at-risk students to support data-driven decision-making in the education sector.
 
 ---
 
@@ -14,27 +16,187 @@ Este projeto tem como objetivo analisar fatores que impactam o desempenho acadê
 
 * UCI Student Performance Dataset
 
-O dataset contém informações sobre estudantes, incluindo:
+The dataset includes:
 
-* Notas em matemática, leitura e escrita
-* Gênero
-* Nível de educação dos pais
-* Participação em curso preparatório
-* Outras variáveis socioeconômicas
+* Scores in math, reading, and writing
+* Gender
+* Parental level of education
+* Test preparation course participation
+* Socioeconomic-related variables
 
 ---
 
-## 🏗️ Arquitetura do Projeto
+## 🏗️ Project Architecture
 
-```
+```text id="arch_en"
 Raw Data → SQL (Staging) → SQL (Analytics) → Python (EDA) → Dashboard → Insights
 ```
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+## ⚙️ Technologies
 
-* SQL (modelagem, limpeza e análise de dados)
+* SQL (data cleaning, transformation, and analysis)
+* Python (Pandas, Matplotlib, Seaborn)
+* Power BI
+* Excel (support analysis)
+
+---
+
+## 📁 Project Structure
+
+```text id="struct_en"
+educational-intelligence-pipeline/
+│
+├── data/
+├── sql/
+├── notebooks/
+├── scripts/
+├── dashboards/
+├── reports/
+└── docs/
+```
+
+---
+
+## 🔄 Data Pipeline
+
+1. Data collection (public CSV dataset)
+2. Data storage in a relational database (SQLite/PostgreSQL)
+3. Data cleaning and transformation (SQL)
+4. Feature engineering and metric creation (SQL)
+5. Exploratory Data Analysis (Python)
+6. Data visualization (Power BI)
+7. Insights generation and recommendations
+
+---
+
+## 📌 Key KPIs
+
+* Average student performance score
+* Percentage of at-risk students
+* Impact of test preparation course
+* Performance gap across socioeconomic factors
+
+---
+
+## 🔍 Analysis
+
+* Impact of test preparation on performance
+* Influence of parental education level
+* Identification of low-performing (at-risk) students
+* Performance comparison across different groups
+
+---
+
+## 📊 Dashboard
+
+An interactive dashboard was built using Power BI, including:
+
+* Overall performance overview
+* Impact factor analysis
+* At-risk student monitoring
+
+📁 Available in: `/dashboards`
+
+---
+
+## 💡 Key Insights
+
+* Students who completed test preparation courses tend to achieve higher average scores
+* There is a correlation between parental education level and student performance
+* Math shows the highest variability among subjects
+* A significant portion of students can be classified as "at risk", requiring targeted intervention
+
+---
+
+## 📈 Recommendations
+
+* Expand access to test preparation programs
+* Develop targeted support for at-risk students
+* Continuously monitor performance indicators
+* Implement strategies to reduce educational inequalities
+
+---
+
+## 🧾 Documentation
+
+* Metric definitions available in `/docs`
+* SQL queries documented in `/sql`
+* Exploratory analysis available in `/notebooks`
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash id="run_en"
+pip install -r requirements.txt
+```
+
+3. Run data loading scripts
+4. Execute SQL queries
+5. Open the analysis notebook
+6. Explore the dashboard in Power BI
+
+---
+
+## 💼 About the Project
+
+This project simulates a real-world data analytics workflow in an educational context, covering the full data lifecycle:
+
+* Data ingestion and preparation
+* Analytical modeling
+* Exploratory analysis
+* Data visualization
+* Strategic insights generation
+
+---
+
+## 👩‍💻 Author
+
+Camila Mota
+Data Analytics | SQL | Python | Business Intelligence
+
+---
+
+# 🇧🇷 Versão em Português
+
+---
+
+## 🎯 Objetivo
+
+Este projeto analisa os principais fatores que influenciam o desempenho acadêmico dos estudantes, identificando padrões, desigualdades e alunos em risco, com o objetivo de apoiar a tomada de decisão baseada em dados na área educacional.
+
+---
+
+## 📊 Dataset
+
+* UCI Student Performance Dataset
+
+O dataset inclui:
+
+* Notas em matemática, leitura e escrita
+* Gênero
+* Escolaridade dos pais
+* Participação em curso preparatório
+* Variáveis socioeconômicas
+
+---
+
+## 🏗️ Arquitetura do Projeto
+
+```text id="arch_pt"
+Dados Brutos → SQL (Staging) → SQL (Analytics) → Python (EDA) → Dashboard → Insights
+```
+
+---
+
+## ⚙️ Tecnologias
+
+* SQL (limpeza, transformação e análise de dados)
 * Python (Pandas, Matplotlib, Seaborn)
 * Power BI
 * Excel (análises complementares)
@@ -43,14 +205,10 @@ Raw Data → SQL (Staging) → SQL (Analytics) → Python (EDA) → Dashboard �
 
 ## 📁 Estrutura do Projeto
 
-```
+```text id="struct_pt"
 educational-intelligence-pipeline/
 │
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── external/
-│
 ├── sql/
 ├── notebooks/
 ├── scripts/
@@ -63,9 +221,9 @@ educational-intelligence-pipeline/
 
 ## 🔄 Pipeline de Dados
 
-1. Coleta de dados (CSV público)
+1. Coleta de dados (dataset público em CSV)
 2. Armazenamento em banco de dados (SQLite/PostgreSQL)
-3. Limpeza e padronização (SQL)
+3. Limpeza e transformação dos dados (SQL)
 4. Criação de métricas e indicadores (SQL)
 5. Análise exploratória (Python)
 6. Visualização de dados (Power BI)
@@ -76,39 +234,39 @@ educational-intelligence-pipeline/
 ## 📌 Principais KPIs
 
 * Média geral dos alunos
-* Taxa de alunos em risco
+* Percentual de alunos em risco
 * Impacto do curso preparatório no desempenho
-* Diferença de desempenho por contexto socioeconômico
+* Diferença de desempenho por fatores socioeconômicos
 
 ---
 
-## 🔍 Análises Realizadas
+## 🔍 Análises
 
-* Avaliação do impacto do curso preparatório nas notas
-* Análise da influência da educação dos pais
-* Identificação de alunos com baixo desempenho (alto risco)
+* Impacto do curso preparatório no desempenho
+* Influência da escolaridade dos pais
+* Identificação de alunos com baixo desempenho (em risco)
 * Comparação de desempenho entre grupos
 
 ---
 
 ## 📊 Dashboard
 
-O dashboard interativo foi desenvolvido no Power BI e inclui:
+Dashboard interativo desenvolvido no Power BI com:
 
-* Visão geral de desempenho acadêmico
+* Visão geral do desempenho acadêmico
 * Análise de fatores de impacto
 * Monitoramento de alunos em risco
 
-📁 Arquivo disponível em: `/dashboards`
+📁 Disponível em: `/dashboards`
 
 ---
 
 ## 💡 Principais Insights
 
-* Alunos que participaram de cursos preparatórios apresentam melhor desempenho médio
-* Existe correlação entre nível educacional dos pais e desempenho acadêmico
-* Matemática apresenta maior variabilidade de notas entre os alunos
-* Um grupo relevante de estudantes pode ser classificado como “alto risco”, exigindo atenção estratégica
+* Alunos que fizeram curso preparatório apresentam melhor desempenho médio
+* Existe correlação entre escolaridade dos pais e desempenho acadêmico
+* Matemática apresenta maior variabilidade de notas
+* Um grupo relevante de alunos pode ser classificado como “em risco”
 
 ---
 
@@ -116,7 +274,7 @@ O dashboard interativo foi desenvolvido no Power BI e inclui:
 
 * Expandir o acesso a cursos preparatórios
 * Criar programas de suporte para alunos em risco
-* Monitorar indicadores de desempenho continuamente
+* Monitorar continuamente os indicadores
 * Desenvolver estratégias para reduzir desigualdades educacionais
 
 ---
@@ -129,27 +287,27 @@ O dashboard interativo foi desenvolvido no Power BI e inclui:
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🚀 Como Executar
 
 1. Clonar o repositório
 2. Instalar dependências:
 
-```
+```bash id="run_pt"
 pip install -r requirements.txt
 ```
 
-3. Executar script de carga de dados
+3. Executar scripts de carga de dados
 4. Rodar queries SQL
 5. Abrir notebook de análise
 6. Visualizar dashboard no Power BI
 
 ---
 
-## 💼 Sobre este Projeto
+## 💼 Sobre o Projeto
 
-Este projeto simula um cenário real de análise de dados em contexto educacional, cobrindo todo o ciclo analítico:
+Este projeto simula um fluxo real de análise de dados no contexto educacional, cobrindo todo o ciclo analítico:
 
-* Engenharia leve de dados
+* Ingestão e preparação de dados
 * Modelagem analítica
 * Análise exploratória
 * Visualização
@@ -160,6 +318,6 @@ Este projeto simula um cenário real de análise de dados em contexto educaciona
 ## 👩‍💻 Autor
 
 Camila Mota
-📊 Foco em Análise de Dados | SQL | Python | BI
+Análise de Dados | SQL | Python | Business Intelligence
 
 ---
